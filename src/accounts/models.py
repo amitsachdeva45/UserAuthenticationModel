@@ -107,6 +107,7 @@ class Profile(models.Model):
 
 
 def post_save_user_model_receiver(sender,instance,created,*args,**kwargs):
+    #It means if user model is created, then create profile of that user
     if created:
         try:
             Profile.objects.create(user=instance)
