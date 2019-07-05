@@ -28,16 +28,17 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
-
+#should be immediately above 'django.contrib.admin' django registration redux 1.10 version for django 1.10
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts'
+    'accounts',
+    'crispy_forms'
 ]
 AUTH_USER_MODEL = 'accounts.MyUser' #It will go to account's model.py file for user creation
 MIDDLEWARE = [
@@ -119,3 +120,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#Crispy Forms
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

@@ -52,4 +52,4 @@ def user_email_login(request, *args, **kwargs):
 
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect("/login")
+    return HttpResponseRedirect("/log1")
